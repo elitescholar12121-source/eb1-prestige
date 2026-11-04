@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EB1 Prestige is a professional resource platform for understanding EB-1A and EB-2 NIW profile development.">
+  <title>EB1 Prestige | Immigration Profile Resources</title>
+
+  <style>
+    :root {
+      --blue: #173f70;
+      --blue-light: #eaf1f8;
+      --ink: #172536;
+      --muted: #637184;
+      --line: #e2e8ef;
+      --white: #ffffff;
+      --background: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: -0.7px;
+    }
+
+    .logo span {
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 14px;
+      color: #39495b;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .nav-button {
+      background: var(--blue);
+      color: white;
+      padding: 11px 18px;
+      border-radius: 4px;
+    }
+
+    .hero {
+      background: linear-gradient(110deg, #f5f8fc, #ffffff);
+      padding: 105px 0 100px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.15;
+      letter-spacing: -1.8px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .primary-button {
+      display: inline-block;
+      background: var(--blue);
+      color: white;
+      padding: 13px 23px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .secondary-button {
+      display: inline-block;
+      border: 1px solid #b9c7d6;
+      color: var(--blue);
+      padding: 12px 22px;
+      border-radius: 4px;
+      margin-left: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      max-width: 680px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+      font-size: 32px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      letter-spacing: -0.7px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      padding: 25px;
+      border-radius: 5px;
+      background: white;
+    }
+
+    .card h3 {
+      font-size: 17px;
+      margin-bottom: 9px;
+      color: var(--blue);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .number {
+      display: inline-block;
+      color: var(--blue);
+      background: var(--blue-light);
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      border-radius: 3px;
+    }
+
+    .soft-section {
+      background: var(--background);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 35px;
+    }
+
+    .service {
+      padding: 19px 0;
+      border-bottom: 1px solid var(--line);
+      font-weight: 600;
+    }
+
+    .service span {
+      color: var(--blue);
+      margin-right: 12px;
+    }
+
+    .cta {
+      background: var(--blue);
+      color: white;
+      padding: 65px 0;
+    }
+
+    .cta h2 {
+      font-size: 31px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: #d9e4f0;
+      max-width: 650px;
+      margin-bottom: 25px;
+    }
+
+    .cta .primary-button {
+      background: white;
+      color: var(--blue);
+    }
+
+    footer {
+      padding: 35px 0;
+      background: #102d4d;
+      color: #d6e0eb;
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    @media (max-width: 800px) {
+      .navbar {
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        padding: 70px 0;
+      }
+
+      .grid,
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .secondary-button {
+        margin: 12px 0 0;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container navbar">
+      <a href="#" class="logo">EB1 <span>PRESTIGE</span></a>
+
+      <nav>
+        <a href="#eb1a">EB-1A</a>
+        <a href="#niw">EB-2 NIW</a>
+        <a href="#services">Services</a>
+        <a href="#knowledge">Knowledge Center</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-button">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Professional Profile Development Resources</div>
+        <h1>Build a Stronger Professional Profile for Your Immigration Journey.</h1>
+        <p>
+          Explore educational resources, professional development opportunities,
+          and profile-building guidance for individuals preparing for EB-1A
+          and EB-2 National Interest Waiver pathways.
+        </p>
+        <a href="#eb1a" class="primary-button">Explore EB-1A Resources</a>
+        <a href="#niw" class="secondary-button">Explore EB-2 NIW</a>
+      </div>
+    </section>
+
+    <section id="eb1a">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Extraordinary Ability</div>
+          <h2>Understanding the EB-1A Criteria</h2>
+          <p>
+            Learn about the ten evidentiary criteria used in evaluating
+            extraordinary ability petitions. Explore what each criterion
+            means and the types of evidence that may be relevant.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card"><span class="number">01</span><h3>Awards and Prizes</h3><p>Recognition through nationally or internationally recognized prizes or awards for excellence.</p></article>
+          <article class="card"><span class="number">02</span><h3>Professional Memberships</h3><p>Membership in associations that require outstanding achievements of their members.</p></article>
+          <article class="card"><span class="number">03</span><h3>Published Material</h3><p>Published material about the individual and their work in professional or major media.</p></article>
+          <article class="card"><span class="number">04</span><h3>Judging the Work of Others</h3><p>Participation as a judge of the work of others in the same or an allied field.</p></article>
+          <article class="card"><span class="number">05</span><h3>Original Contributions</h3><p>Evidence of original contributions of major significance in the field.</p></article>
+          <article class="card"><span class="number">06</span><h3>Scholarly Articles</h3><p>Authorship of scholarly articles in professional publications or other major media.</p></article>
+          <article class="card"><span class="number">07</span><h3>Artistic Exhibitions</h3><p>Display of work at artistic exhibitions or showcases.</p></article>
+          <article class="card"><span class="number">08</span><h3>Leading or Critical Role</h3><p>Performance in a leading or critical role for distinguished organizations.</p></article>
+          <article class="card"><span class="number">09</span><h3>High Salary or Remuneration</h3><p>Evidence of high salary or significantly high remuneration compared with others in the field.</p></article>
+          <article class="card"><span class="number">10</span><h3>Commercial Success</h3><p>Commercial success in the performing arts, supported by relevant evidence.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="niw" class="soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">National Interest Waiver</div>
+          <h2>Understanding the EB-2 NIW Framework</h2>
+          <p>
+            The National Interest Waiver framework is commonly evaluated
+            through three prongs. Explore the central questions behind each one.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <span class="number">PRONG 01</span>
+            <h3>Substantial Merit and National Importance</h3>
+            <p>Understanding the proposed endeavor and its potential value and importance to the United States.</p>
+          </article>
+          <article class="card">
+            <span class="number">PRONG 02</span>
+            <h3>Well Positioned to Advance the Endeavor</h3>
+            <p>Examining the individual's education, skills, experience, record of success, and progress.</p>
+          </article>
+          <article class="card">
+            <span class="number">PRONG 03</span>
+            <h3>Benefit of Waiving the Job Offer</h3>
+            <p>Considering whether, on balance, it would benefit the United States to waive the job offer and labor certification requirements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Professional Support</div>
+          <h2>Our Services</h2>
+          <p>
+            Professional profile development services for researchers,
+            academics, engineers, and technology professionals.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service"><span>01</span> Citation Building &amp; Growth</div>
+          <div class="service"><span>02</span> Professional Media Coverage</div>
+          <div class="service"><span>03</span> Article Writing &amp; Publication</div>
+          <div class="service"><span>04</span> Peer-Review Opportunities</div>
+          <div class="service"><span>05</span> Professional Membership Applications</div>
+          <div class="service"><span>06</span> Hackathon Judging Opportunities</div>
+          <div class="service"><span>07</span> Organic GitHub Promotion</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="knowledge" class="soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Learn and Explore</div>
+          <h2>Knowledge Center</h2>
+          <p>
+            A growing collection of educational materials designed to help
+            professionals understand profile development and immigration
+            evidence categories.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>EB-1A Guides</h3>
+            <p>Educational articles explaining the EB-1A criteria and common evidence categories.</p>
+          </article>
+          <article class="card">
+            <h3>EB-2 NIW Guides</h3>
+            <p>Resources covering the three-prong framework and professional positioning.</p>
+          </article>
+          <article class="card">
+            <h3>Research and Publications</h3>
+            <p>Insights into scholarly publishing, citations, peer review, and research visibility.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">About EB1 Prestige</div>
+          <h2>Professional Growth. Clearer Information. Better Preparation.</h2>
+          <p>
+            EB1 Prestige is an educational resource platform focused on
+            professional profile development for individuals exploring
+            employment-based immigration pathways. Our aim is to make
+            relevant information easier to understand and access.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="container">
+        <h2>Ready to Discuss Your Professional Profile?</h2>
+        <p>
+          Get in touch to discuss profile development services or ask a
+          question about the resources available on EB1 Prestige.
+        </p>
+        <a href="https://wa.me/16469804143" class="primary-button" target="_blank" rel="noopener noreferrer">Contact Us on WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div>© 2026 EB1 Prestige. All rights reserved.</div>
+      <div>
+        <a href="#about">About</a> &nbsp; | &nbsp;
+        <a href="#contact">Contact</a> &nbsp; | &nbsp;
+        <a href="#disclaimer">Disclaimer</a>
+      </div>
+    </div>
+    <div class="container" id="disclaimer" style="margin-top:18px;color:#b9c8d8;">
+      EB1 Prestige provides educational and professional profile development
+      resources. We are not a law firm and do not provide legal advice or
+      guarantee immigration outcomes. Consult a qualified immigration attorney
+      for advice about your individual case.
+    </div>
+  </footer>
+
+</body>
+</html>
